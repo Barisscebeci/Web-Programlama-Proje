@@ -1,0 +1,59 @@
+﻿@model HistoryCreateVM
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h5>Create Examination</h5>
+<hr />
+<dl class="row">
+    <dd class="col-sm-4">
+        Appointment: @Html.DisplayFor(model => model.Reservation.StartDate)
+    </dd>
+    <dd class="col-sm-4">
+        Patient: @Html.DisplayFor(model => model.Reservation.Patient.User.FullName)
+    </dd>
+    <dd class="col-sm-4">
+        Doc: @Html.DisplayFor(model => model.Reservation.Doctor.User.FullName)
+    </dd>
+</dl>
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <h6>Diseas</h6>
+                <hr />
+                <select asp-for="DiseasId" class="form-control" asp-items="ViewBag.DiseasId"></select>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="form-group">
+                <h6>Medication</h6>
+                <hr />
+                @foreach (var item in ViewBag.MedicationId)
+                {
+                    <div class="col-md-6 float-left overflow-hidden">
+                        <label class="control-label">
+                            <input type="checkbox" name="Medication" value="@item.Id" />
+                            @item.Name
+                        </label>
+                    </div>
+                }
+            </div>
+        </div>
+        <input name="StartDate" type="hidden" asp-for="StartDate" />
+        <input name="ReservationId" type="hidden" asp-for="Reservation.Id" />
+        <input name="PatientId" type="hidden" asp-for="Reservation.PatientId" />
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

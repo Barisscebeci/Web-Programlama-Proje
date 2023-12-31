@@ -1,0 +1,47 @@
+﻿@model List<HastaneBilgiSistemi.Data.Model.Reservation>
+
+@{
+    ViewData["Title"] = "TURTEP  Hospital | Home Page";
+}
+
+<div class="text-center">
+    <h4 class="display-5">Welcome To TURTEP Hospital</h4>
+</div>
+
+<div>
+    <a href="/Identity/Account/Manage/Reservation">New Reservation</a>
+</div>
+
+
+<table class="table" asp-authorize asp-roles="Doctor">
+    <thead>
+        <tr>
+            <th>Polyclinic</th>
+            <th>Doctor</th>
+            <th>Patient</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Polyclinic.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Doctor.User.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patient.User.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                <a href="/PatientHistory/Create/?reservationId=@item.Id">Start Examination</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
