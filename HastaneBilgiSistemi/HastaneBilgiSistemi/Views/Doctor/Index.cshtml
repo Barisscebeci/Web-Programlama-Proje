@@ -8,7 +8,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">@_localization.Getkey("Create New").Value</a>
 </p>
 <table class="table">
     <thead>
@@ -50,11 +50,48 @@
                 @Html.DisplayFor(modelItem => item.Polyclinic.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id">@_localization.Getkey("Edit").Value</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">@_localization.Getkey("Details").Value</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">@_localization.Getkey("Delete").Value</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+@* @section Scripts {
+    <script src="~/js/doctor-patient.js"></script>
+}
+
+ <!-- ÖrnekRazorGörünümü.cshtml içinde -->
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Butona tıklandığında AJAX çağrısını tetikle
+            $('#hastalariGoster').click(function () {
+                var doktorId = $('#doktorSecim').val(); // Seçilen doktorun ID'sini al
+                if (doktorId) {
+                    getHastalarByDoktor(doktorId); // AJAX fonksiyonunu çağır
+                }
+            });
+        });
+    </script>
+}
+
+
+
+
+<h2>Doktor Listesi</h2>
+
+<!-- Doktorları Seçmek için Dropdown Menü -->
+<select id="doktorSecim">
+    <option value="">Doktor Seçin</option>
+    @foreach (var doktor in Model) {
+        <option value="@doktor.Id">@doktor.User</option>
+    }
+</select>
+
+<!-- Hastaları Göstermek için Buton -->
+<button id="hastalariGoster">Hastaları Göster</button>
+
+@* Burada hastaların listeleneceği alanı veya tabloyu ekleyebilirsiniz  *@

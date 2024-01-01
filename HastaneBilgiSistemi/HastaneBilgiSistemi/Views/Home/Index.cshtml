@@ -5,21 +5,21 @@
 }
 
 <div class="text-center">
-    <h4 class="display-5">Welcome To TURTEP Hospital</h4>
+    <h4 class="display-5">@_localization.Getkey("welcome").Value</h4>
 </div>
 
 <div>
-    <a href="/Identity/Account/Manage/Reservation">New Reservation</a>
+    <a href="/Identity/Account/Manage/Reservation">@_localization.Getkey("New Reservation").Value</a>
 </div>
 
 
-<table class="table" asp-authorize asp-roles="Doctor">
+<table class="table" asp-authorize asp-roles="Doctor" placeholder="@_localization.Getkey("Doctor").Value">
     <thead>
         <tr>
-            <th>Polyclinic</th>
-            <th>Doctor</th>
-            <th>Patient</th>
-            <th>Date</th>
+            <th>"@_localization.Getkey("Polyclinic").Value"</th>
+            <th>placeholder="@_localization.Getkey("Doctor").Value"</th>
+            <th>placeholder="@_localization.Getkey("Patient").Value"</th>
+            <th>placeholder="@_localization.Getkey("Date").Value"</th>
         </tr>
     </thead>
     <tbody>

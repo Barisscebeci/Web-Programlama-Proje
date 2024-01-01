@@ -303,3 +303,10 @@ C:\Users\USER\OneDrive\Masaüstü\Yeni klasör\HastaneOtomasyonu-master\HastaneB
 C:\Users\USER\OneDrive\Masaüstü\Yeni klasör\HastaneOtomasyonu-master\HastaneBilgiSistemi\HastaneBilgiSistemi\obj\Debug\net6.0\HastaneBilgiSistemi.pdb
 C:\Users\USER\OneDrive\Masaüstü\Yeni klasör\HastaneOtomasyonu-master\HastaneBilgiSistemi\HastaneBilgiSistemi\obj\Debug\net6.0\HastaneBilgiSistemi.genruntimeconfig.cache
 C:\Users\USER\OneDrive\Masaüstü\Yeni klasör\HastaneOtomasyonu-master\HastaneBilgiSistemi\HastaneBilgiSistemi\obj\Debug\net6.0\ref\HastaneBilgiSistemi.dll
+C:\Users\USER\OneDrive\Masaüstü\Yeni klasör\HastaneOtomasyonu-master\HastaneBilgiSistemi\HastaneBilgiSistemi\bin\Debug\net6.0\en-US\HastaneBilgiSistemi.resources.dll
+C:\Users\USER\OneDrive\Masaüstü\Yeni klasör\HastaneOtomasyonu-master\HastaneBilgiSistemi\HastaneBilgiSistemi\bin\Debug\net6.0\tr-TR\HastaneBilgiSistemi.resources.dll
+C:\Users\USER\OneDrive\Masaüstü\Yeni klasör\HastaneOtomasyonu-master\HastaneBilgiSistemi\HastaneBilgiSistemi\obj\Debug\net6.0\HastaneBilgiSistemi.Resources.SharedResource.en-US.resources
+C:\Users\USER\OneDrive\Masaüstü\Yeni klasör\HastaneOtomasyonu-master\HastaneBilgiSistemi\HastaneBilgiSistemi\obj\Debug\net6.0\HastaneBilgiSistemi.Resources.SharedResource.tr-TR.resources
+C:\Users\USER\OneDrive\Masaüstü\Yeni klasör\HastaneOtomasyonu-master\HastaneBilgiSistemi\HastaneBilgiSistemi\obj\Debug\net6.0\HastaneBilgiSistemi.csproj.GenerateResource.cache
+C:\Users\USER\OneDrive\Masaüstü\Yeni klasör\HastaneOtomasyonu-master\HastaneBilgiSistemi\HastaneBilgiSistemi\obj\Debug\net6.0\en-US\HastaneBilgiSistemi.resources.dll
+C:\Users\USER\OneDrive\Masaüstü\Yeni klasör\HastaneOtomasyonu-master\HastaneBilgiSistemi\HastaneBilgiSistemi\obj\Debug\net6.0\tr-TR\HastaneBilgiSistemi.resources.dll

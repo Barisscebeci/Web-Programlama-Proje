@@ -46,16 +46,16 @@
         <thead>
             <tr>
                 <th>
-                    Diseas
+                    @_localization.Getkey("Diseas").Value
                 </th>
                 <th>
-                    Doctor
+                    @_localization.Getkey("Doctor").Value
                 </th>
                 <th>
-                    Polyclinic
+                    @_localization.Getkey("Polyclinic").Value
                 </th>
                 <th>
-                    Reservation
+                    @_localization.Getkey("Reservation").Value
                 </th>
                 <th>
                     Completed At
@@ -104,7 +104,7 @@
         <thead>
             <tr>
                 <th>
-                    Medications
+                    @_localization.Getkey("Medication").Value
                 </th>
             </tr>
         </thead>
@@ -123,5 +123,5 @@
 
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">@_localization.Getkey("List").Value</a>
 </div>

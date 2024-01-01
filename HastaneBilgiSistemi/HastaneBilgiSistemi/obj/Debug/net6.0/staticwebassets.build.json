@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/m2cia1W05lQJyGKWnCMQhnhMkugJ/4RVNpgj+Yo47Q=",
+  "Hash": "F00RF6ueSDrUdbkqj+llW7+yoFUZCYfOD26QvVNHpeU=",
   "Source": "HastaneBilgiSistemi",
   "BasePath": "_content/HastaneBilgiSistemi",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\OneDrive\\Masaüstü\\Yeni klasör\\HastaneOtomasyonu-master\\HastaneBilgiSistemi\\HastaneBilgiSistemi\\wwwroot\\js\\doctor-patient.js",
+      "SourceId": "HastaneBilgiSistemi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\OneDrive\\Masaüstü\\Yeni klasör\\HastaneOtomasyonu-master\\HastaneBilgiSistemi\\HastaneBilgiSistemi\\wwwroot\\",
+      "BasePath": "_content/HastaneBilgiSistemi",
+      "RelativePath": "js/doctor-patient.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\doctor-patient.js"
     },
     {
       "Identity": "C:\\Users\\USER\\OneDrive\\Masaüstü\\Yeni klasör\\HastaneOtomasyonu-master\\HastaneBilgiSistemi\\HastaneBilgiSistemi\\wwwroot\\js\\site.js",

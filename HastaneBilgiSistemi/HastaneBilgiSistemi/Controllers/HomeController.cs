@@ -10,6 +10,9 @@ using HastaneBilgiSistemi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Localization;
+using HastaneBilgiSistemi.Services;
+using System.Threading;
 
 namespace HastaneBilgiSistemi.Controllers
 {
@@ -17,15 +20,18 @@ namespace HastaneBilgiSistemi.Controllers
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private LanguageService _localization;
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(
             ILogger<HomeController> logger,
-            ApplicationDbContext context
+            ApplicationDbContext context,
+            LanguageService localization
             )
         {
             _context = context;
             _logger = logger;
+            _localization = localization;
         }
 
         public async Task<IActionResult> Index()
@@ -41,11 +47,23 @@ namespace HastaneBilgiSistemi.Controllers
                 .Include(x => x.Patient).ThenInclude(doc => doc.User)
                 .Where(x => !x.IsCompleted && x.DoctorId == docc.Id)
                 .ToListAsync();
+                ViewBag.Welcome = _localization.Getkey("Welcome").Value;
+                var currentCulture = Thread.CurrentThread.CurrentCulture.Name;
                 return View(result);
+
             }
             return View();
         }
 
+        public IActionResult ChangeLanguage(string culture)
+        {
+            Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName, 
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)), new Microsoft.AspNetCore.Http.CookieOptions()
+                {
+                Expires = DateTimeOffset.UtcNow.AddYears(1)
+            });
+            return Redirect(Request.Headers["Referer"].ToString());
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

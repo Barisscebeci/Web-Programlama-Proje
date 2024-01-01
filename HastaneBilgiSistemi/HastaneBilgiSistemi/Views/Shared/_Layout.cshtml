@@ -20,25 +20,45 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item" asp-authorize asp-roles="Admin,Secretary">
-                            <a class="nav-link text-dark" asp-controller="Doctor" asp-action="Index">Doctor</a>
+                            <a class="nav-link text-dark" asp-controller="Doctor" asp-action="Index">@_localization.Getkey("Doctor").Value</a>
                         </li>
                         <li class="nav-item" asp-authorize asp-roles="Admin,Secretary">
-                            <a class="nav-link text-dark" asp-controller="Diseas" asp-action="Index">Diseas</a>
+                            <a class="nav-link text-dark" asp-controller="Diseas" asp-action="Index">@_localization.Getkey("Diseas").Value</a>
                         </li>
                         <li class="nav-item" asp-authorize asp-roles="Admin,Secretary,Doctor">
-                            <a class="nav-link text-dark" asp-controller="Patient" asp-action="Index">Patient</a>
+                            <a class="nav-link text-dark" asp-controller="Patient" asp-action="Index">@_localization.Getkey("Patient").Value</a>
                         </li>
                         <li class="nav-item" asp-authorize asp-roles="Admin,Secretary">
-                            <a class="nav-link text-dark" asp-controller="Medication" asp-action="Index">Medication</a>
+                            <a class="nav-link text-dark" asp-controller="Medication" asp-action="Index">@_localization.Getkey("Medication").Value</a>
                         </li>
                         <li class="nav-item" asp-authorize asp-roles="Admin,Secretary">
-                            <a class="nav-link text-dark" asp-controller="Polyclinic" asp-action="Index">Polyclinic</a>
+                            <a class="nav-link text-dark" asp-controller="Polyclinic" asp-action="Index">@_localization.Getkey("Polyclinic").Value</a>
                         </li>
                         <li class="nav-item" asp-authorize asp-roles="Admin,Secretary">
-                            <a class="nav-link text-dark" asp-controller="Reservation" asp-action="Index">Reservation</a>
+                            <a class="nav-link text-dark" asp-controller="Reservation" asp-action="Index">@_localization.Getkey("Reservation").Value</a>
                         </li>
                         <li class="nav-item" asp-authorize asp-roles="Admin">
-                            <a class="nav-link text-dark" asp-controller="Secretary" asp-action="Index">Secretary</a>
+                            <a class="nav-link text-dark" asp-controller="Secretary" asp-action="Index">@_localization.Getkey("Secratary").Value</a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    @_localization.Getkey("Diller").Value
+                                </button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="en-US" class="dropdown-item">
+                                            <i class="flag-icon flag-icon-gb"></i> English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="tr-TR" class="dropdown-item">
+                                            <i class="flag-icon flag-icon-gb"></i> Türkçe
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -53,7 +73,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - HastaneBilgiSistemi - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - HastaneBilgiSistemi - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

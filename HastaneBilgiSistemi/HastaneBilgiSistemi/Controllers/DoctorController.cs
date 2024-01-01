@@ -204,6 +204,30 @@ namespace HastaneBilgiSistemi.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+/*        // GET: Doctor/GetPatientsByDoctor/5
+        [HttpGet]
+        [Authorize(Roles = "Doctor,Admin,secretary")]
+        public async Task<IActionResult> GetPatientsByDoctor(int doctorId)
+        {
+            if (doctorId == null)
+                return NotFound();
+
+            var patients = await _context.Patient
+                .Where(p => p.DoctorId == doctorId)
+                .Include(p => p.User) // Eğer hasta bilgileriyle ilgili daha fazla detay gerekiyorsa
+                .Select(p => new {
+                    p.Id,
+                    Name = p.User.FirstName + " " + p.User.LastName,
+                    // Diğer gerekli alanlar
+                })
+                .ToListAsync();
+
+            if (patients == null)
+                return NotFound();
+
+            return Json(patients);
+        }*/
+
         private bool ApplicationUserExists(int id)
         {
             return _context.Users.Any(e => e.Id == id);

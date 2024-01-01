@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <h3>Secretary Details</h3>
+<h3>@_localization.Getkey("Secretary Details").Value</h3>
 
 <div>
     <dl class="row">
@@ -25,5 +25,5 @@
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">@_localization.Getkey("List").Value</a>
 </div>

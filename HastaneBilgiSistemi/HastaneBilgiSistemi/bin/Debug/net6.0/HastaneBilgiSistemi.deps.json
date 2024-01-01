@@ -19,6 +19,14 @@
         },
         "runtime": {
           "HastaneBilgiSistemi.dll": {}
+        },
+        "resources": {
+          "en-US/HastaneBilgiSistemi.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr-TR/HastaneBilgiSistemi.resources.dll": {
+            "locale": "tr-TR"
+          }
         }
       },
       "Humanizer.Core/2.8.26": {

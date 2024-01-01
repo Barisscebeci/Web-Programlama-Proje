@@ -4,7 +4,12 @@
     ViewData["Title"] = "Hasta Kayıt";
 }
 
-<h4>Yeni Hasta Kaydı Oluşturma</h4>
+
+@using HastaneBilgiSistemi.Services;
+
+@inject LanguageService _localization;
+
+<h4>@_localization.Getkey("New Diseas Register").Value</h4>
 <hr />
 
 <form asp-route-returnUrl="@Model.ReturnUrl" method="post">

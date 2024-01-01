@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+/*using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using HastaneBilgiSistemi.Data;
@@ -12,9 +12,12 @@ using HastaneBilgiSistemi.Cache;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Options;
 using HastaneBilgiSistemi.CookieOptions;
+#region localizer
 
+#endregion
 namespace HastaneBilgiSistemi
 {
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -92,3 +95,4 @@ namespace HastaneBilgiSistemi
         }
     }
 }
+*/
